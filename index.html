@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodání CD-R wrapů - Návod</title>
+    <style>
+        /* Moderní CSS Reset a proměnné */
+        :root {
+            --primary-color: #0056b3;
+            --accent-color: #007bff;
+            --text-color: #333;
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Hlavní kontejner */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+            margin-bottom: 30px;
+        }
+
+        /* Sekce a typografie */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        .link-blue {
+            color: var(--accent-color);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .link-blue:hover {
+            color: var(--primary-color);
+        }
+
+        strong {
+            font-weight: 700;
+            color: #000;
+        }
+
+        /* Obrázky */
+        .img-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Specifické úpravy pro tvary obrázků */
+        .img-landscape {
+            width: 100%; /* Obdélník na šířku */
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .img-square {
+            width: 100%;
+            max-width: 350px; /* Aby nebyl čtverec příliš obrovský na PC */
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        /* Tlačítko */
+        .footer-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+            gap: 10px;
+        }
+
+        .btn-back:hover {
+            background-color: #444;
+            transform: translateY(-2px);
+        }
+
+        /* Responzivita pro mobilní telefony */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 0.95rem;
+            }
+            .img-square {
+                max-width: 100%; /* Na mobilu využije celou šířku */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Dodání CD-R wrapů z bscomu do boxu</h1>
+        <hr>
+    </header>
+
+    <!-- Sekce 1 -->
+    <section>
+        <h2>1. Objednávka přes bscom.cz</h2>
+        <p>
+            Jakmile bude zažádáno dodání wrapů Verbatim z bscomu, je potřeba je objednat od bscomu 
+            <a href="https://nts-windows-tools.github.io/bscom-objednat-wrap-cdr/" target="_blank" class="link-blue">v tomto systému</a>. 
+            Následně doplňovat údaje ve stejném systému jako jsou čísla objednávek, faktur atd... 
+            Je možné si i objednat více wrapů a nechat si nějaké skladem přímo, ale je důležité si zajistit, aby se nepromíchaly s klasickými!!
+        </p>
+        <div class="img-container">
+            <img src="image1.png" alt="Objednávka" class="img-landscape">
+        </div>
+    </section>
+
+    <!-- Sekce 2 -->
+    <section>
+        <h2>2. Příprava</h2>
+        <p>
+            Wrapy CD-R Verbatim z bscomu nesmí být kvůli speciálnímu číslu SN jen tak náhodně dány do boxu jako ty ostatní! 
+            Před dodáním do boxu musí být označeny. Jediný způsob, jak je možné wrapy označit je, že je vložíš 
+            <strong>PO JEDNOM</strong> do samostatných zip-lock sáčků (Případně, pokud se tam nevejdou, použij normální sáček, 
+            ale musíš je balit po jednom). Na sáček napiš nebo nalep na papírku / bílém lepítku 
+            <strong>viditelně text "BSCOM"</strong>. Jinak je označení neplatné a bude vyžadováno vrácení peněz! 
+            Je nutné jej po jednom vkládat do sáčků (nejlépe zip-lock) a na ně napsat nebo nalepit BSCOM!
+        </p>
+        <div class="img-container">
+            <img src="image2.png" alt="Příprava sáčku" class="img-square">
+        </div>
+    </section>
+
+    <!-- Sekce 3 -->
+    <section>
+        <h2>3. Dodání do boxu</h2>
+        <p>Nyní už jen zbývá sáček / sáčky dodat do boxu a čekat na převzetí a platbu!</p>
+        <div class="img-container">
+            <img src="image3.png" alt="Úspěšná platba" class="img-square">
+        </div>
+    </section>
+
+    <!-- Patička s tlačítkem -->
+    <div class="footer-actions">
+        <a href="https://nts-windows-tools.github.io/bscom-objednat-wrap-cdr/" class="btn-back">
+            <span>&larr;</span> Zpět
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
